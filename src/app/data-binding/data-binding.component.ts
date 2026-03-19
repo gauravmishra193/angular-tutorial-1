@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-data-binding',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './data-binding.component.html',
   styleUrl: './data-binding.component.scss'
 })
 export class DataBindingComponent {
-
+  fname : string = "gaurav";
+  sname : string = "mishra"
+  email: string = "gaurav@example.com"
+  random: string = ""
+  
+  onSave() {
+    alert("data saved successfully!");
+  }
 }

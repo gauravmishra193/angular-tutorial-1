@@ -1,0 +1,63 @@
+<div class="row text-center">
+    <div class="col-12 m-3">
+        <b>Example of *ngIf vs if</b>
+    </div>
+</div>
+<hr class="mt-3">
+
+<div class="row text-center">
+    <p>EXAMPLE 1</p>
+    <div>
+        <input (click)="toggleChecked()" type="checkbox"> Terms and condition
+    </div>
+    <div>
+        <button [ngClass]="isChecked? 'btn btn-success' : 'btn btn-success disabled' "> SAVE</button>
+    </div>
+    <hr class="mt-3">
+</div>
+
+<div class="row text-center">
+    <p>EXAMPLE 2</p>
+    <div>
+        <input [(ngModel)]="text1" (input)="checkSame()" type="text" (copy)="analyseCopy()"> 
+    </div>
+    <div>
+        <input [(ngModel)]="text2" (input)="checkSame()" type="text" (copy)="analyseCopy()"> 
+    </div>
+    <div *ngIf="text1 === text2">
+        <p>same texts</p>
+    </div>
+    <div *ngIf="text1 !== text2">
+        <p>different!</p>
+    </div>
+    
+    <hr class="mt-3">
+</div>
+<hr class="mt-3">
+
+<div class="row text-center">
+    <p>EXAMPLE 3</p>
+    <div>
+        <input [(ngModel)]="text1" (input)="checkSame()" type="text" (copy)="analyseCopy()"> 
+    </div>
+    <div>
+        <input [(ngModel)]="text2" (input)="checkSame()" type="text" (copy)="analyseCopy()"> 
+    </div>
+    <!-- <div *ngIf="text1 === text2">
+        <p>same texts</p>
+    </div>
+    <div *ngIf="text1 !== text2">
+        <p>different!</p>
+    </div>     -->
+    @if(text1 === text2) {
+        <div>
+            <p>same texts!</p>
+        </div>
+    }
+    @else {
+        <div>
+            <p>different texts!</p>
+        </div>
+    }
+    <hr class="mt-3">
+</div>

@@ -1,1 +1,22 @@
 <p>data-binding works!</p>
+<div>
+    <div>
+        <p> 1. Interpolation </p>
+        <p>First Name is : {{fname}}</p>
+        <p>Last Name is : {{sname}}</p>
+        <p>Email is : {{email}}</p>
+    </div>
+    <div>
+        <p> 2. Property Binding </p>
+        <input name="" [placeholder]="sname" type="text">
+    </div>
+    <div>
+        <p> 3. Event Binding </p>
+        <button (click)="onSave()">Save</button>
+    </div>
+    <div>
+        <p> 4. Two Way data binding </p>
+        <input type = "text" [(ngModel)]="random"> <br>
+        {{random}}
+    </div>
+</div>

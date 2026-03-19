@@ -7,16 +7,30 @@
         <h4 [ngClass]="styleVal">This is the first example of ngClass</h4>
         <button class="btn btn-success m-2" (click)="onClick('text-success')" >Green</button>
         <button class="btn btn-danger m-2" (click)="onClick('text-danger')">Red</button>
-        <hr>
+
     </div>
     <div class="col-4">
         <h4 [ngClass]="styleVal">This is the second example of ngClass</h4>
         <input type="checkbox" (click)="onClick2()"> Click to change the color
-        <hr>
+
     </div>
     <div class="col-4">
         <h4 [ngClass]="userClass">This is the third example of ngClass</h4>
         <input [(ngModel)]="userClass" type="text" placeholder="eg: text-warning"> 
-        <hr>
+
+    </div>
+</div>
+
+<hr class="m-3">
+
+<div class="row text-center">
+    <h1>Examples of Attribute Directives- ngStyle</h1>
+</div>
+
+<div class="row text-center">
+    <div class="col-4">
+        <h3 [ngStyle]="{'color': styleColor, 'font' : 'lighter'}">This is the first example of ngStyle</h3>
+        <button class="btn btn-primary" (click)="onClick3('blue')">click for blue</button>
+        <button class="btn btn-success" (click)="onClick3('green')">click for green</button>
     </div>
 </div>

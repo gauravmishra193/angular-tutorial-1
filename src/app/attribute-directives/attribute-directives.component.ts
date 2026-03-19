@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class AttributeDirectivesComponent {
   styleVal : string = 'text-success'
   userClass: string = " "
+  styleColor: string = ''
 
   onClick(col: string) {
     this.styleVal = col;
@@ -18,6 +19,10 @@ export class AttributeDirectivesComponent {
   
   onClick2() {
     this.styleVal = (this.styleVal==='text-success')? 'text-danger': 'text-success';
+  }
+  
+  onClick3(newCol: string) {
+    this.styleColor = newCol;
   }
 
 }
